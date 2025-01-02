@@ -1,17 +1,30 @@
 import { Component } from '@angular/core';
 
+interface IPlano
+{
+  infos: IInfos;
+}
+
+interface IInfos
+{
+  tipo: string;
+  valor: number;
+}
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  plano = 
+  // Esse TS-ignore é uma gambiarra para não dar erro de compilação.
+  // @ts-ignore
+  plano: any = 
   {
-    infos:
+    infos: 
     {
       tipo: 'Simples',
-      valor: 100, 
+      preco: 100,
     }
-  }
+  };
 }
