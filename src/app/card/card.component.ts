@@ -24,7 +24,7 @@ export class CardComponent {
     infos: 
     {
       tipo: 'Simples',
-      preco: 100,
+      valor: 100,
     }
   };
 }

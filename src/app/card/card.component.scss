@@ -22,3 +22,13 @@
           font-size: 40px;
      }
 }
+
+:host ::ng-deep app-card-button-cancel .card-cancel-button
+{
+     background-color: green !important;
+}
+
+:host ::ng-deep mat-slider .mdc-slider__track--active_fill
+{
+     border-color: yellowgreen !important;
+}
