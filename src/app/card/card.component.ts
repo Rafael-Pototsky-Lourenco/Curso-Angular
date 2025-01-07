@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 interface IPlano
 {
@@ -14,7 +14,8 @@ interface IInfos
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrls: ['./card.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CardComponent {
   // Esse TS-ignore é uma gambiarra para não dar erro de compilação.
