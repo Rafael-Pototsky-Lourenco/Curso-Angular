@@ -9,3 +9,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
      background-color: brown;
 }
+
+.emulated
+{
+     background-color: darkseagreen;
+     // Caso você coloque o "!important" no final, o estilo será aplicado sobrescrevendo a propriedade Emulated do ViewEncapsulation.
+     // background-color: darkseagreen !important;
+}
+
+// Era para ser aplicado nos cards, porém por algum motivo ele tá criando um painel azul na bolinha ao invés da reta do slider, por isso deixei comentado.
+mat-slider#custom-slider .mdc-slider__track--active_fill
+{
+     border-color: blue !important;
+}
