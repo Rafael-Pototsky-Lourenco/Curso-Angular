@@ -1,0 +1,24 @@
+<!--<input 
+id="meu-input" 
+[value]="inputText" 
+[type]="inputType" 
+[disabled]="isDisabled" 
+(input)="handleInputEvent($event)">
+<br><br>
+<button (click)="enableInput()">Habilitar</button>
+<button style="margin-left: 5px;" (click)="disableInput()">Desabilitar</button>
+
+<br><br>
+
+<button (click)="setPasswordTypeInput()">Senha</button>
+<button style="margin-left: 5px;" (click)="setTextTypeInput()">Texto</button>
+
+<br><br>
+
+<button (click)="logInputText()">Log</button>-->
+
+<button [attr.title]="buttonTitle">Butão</button>
+
+<button [attr.disabled]="buttonDisabled ? true : null">Desabilitado</button>
+
+<button (click)="onButtonClick()">Mudar Props</button>
