@@ -15,10 +15,32 @@ id="meu-input"
 
 <br><br>
 
-<button (click)="logInputText()">Log</button>-->
+<button (click)="logInputText()">Log</button>
 
 <button [attr.title]="buttonTitle">Butão</button>
 
 <button [attr.disabled]="buttonDisabled ? true : null">Desabilitado</button>
 
 <button (click)="onButtonClick()">Mudar Props</button>
+
+<button style="width: 100px; background-color: aqua;">Botão 0</button>
+<br>
+<button [style.width]="widthButton1" [style.backgroundColor]="'lightblue'">Botão 1</button>
+<br>
+<button [style.width.px]="widthButton2" [style.backgroundColor]="'pink'">Botão 2</button>
+<br>
+<button [style]="'width: 140px; backgroundColor: brown;'">Botão 3</button>
+<br>
+<button [style]="styleObj">Botão 5</button>
+<br>
+<button (click)="updateStyleObj()">Atualizar Obj</button>
+<br>
+<button (click)="updateStyleObjCorrect()">Atualizar Obj Correto</button>
+<br>
+<button (click)="updateWidth()">Atualizar width</button>-->
+
+<button [class.red-button]="isRedButton" (click)="isGreen = false">Butão Vermei</button>
+<br>
+<button [class.green-button]="true" (click)="isGreen = true">Butão Verdi</button>
+<br>
+<button [class]="{ 'red-button': !isGreen, 'green-button': isGreen }">Butão di Trem</button>
