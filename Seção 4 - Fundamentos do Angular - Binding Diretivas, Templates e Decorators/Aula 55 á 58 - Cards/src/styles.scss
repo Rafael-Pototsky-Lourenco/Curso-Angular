@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../src/styles/global-overrides";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.global
+{
+     background-color: brown;
+}
+
+.emulated
+{
+     background-color: darkseagreen;
+     // Caso você coloque o "!important" no final, o estilo será aplicado sobrescrevendo a propriedade Emulated do ViewEncapsulation.
+     // background-color: darkseagreen !important;
+}
+
+// Era para ser aplicado nos cards, porém por algum motivo ele tá criando um painel azul na bolinha ao invés da reta do slider, por isso deixei comentado.
+mat-slider#custom-slider .mdc-slider__track--active_fill
+{
+     border-color: blue !important;
+}
