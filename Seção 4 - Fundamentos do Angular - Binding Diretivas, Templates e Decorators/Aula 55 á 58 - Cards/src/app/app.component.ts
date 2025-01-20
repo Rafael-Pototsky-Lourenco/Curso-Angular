@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Aula_20_Criacao_Componente';
+
+  cardPlanType = 'Simples';
+  cardPlanValue = 100;
+
+  handlePlanType(text: string)
+  {
+    this.cardPlanType = text;
+  }
 }

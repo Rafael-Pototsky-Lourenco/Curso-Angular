@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, numberAttribute, ViewEncapsulation } from '@angular/core';
 
 interface IPlano
 {
@@ -9,6 +9,12 @@ interface IInfos
 {
   tipo: string;
   valor: number;
+}
+
+function handlePlanType(value: string)
+{
+  console.log('handlePlanType', value);
+  return value.toUpperCase();
 }
 
 @Component({
@@ -22,12 +28,34 @@ interface IInfos
 export class CardComponent {
   // Esse TS-ignore é uma gambiarra para não dar erro de compilação. E sim tem que usar com comentário.
   // @ts-ignore
-  plano: any = 
+  // plano: any = 
+  // {
+  //   infos: 
+  //   {
+  //     tipo: 'Simples',
+  //     valor: 100,
+  //   }
+  // };
+
+  // @Input({ required: true, alias: 'planValueAlias', transform: numberAttribute}) planValue: number = 0;
+  @Input({ required: true, alias: 'planValueAlias' }) planValue: number = 0;
+  @Input({alias: 'planTypeAlias', transform: (value: string) => handlePlanType(value) }) planType: string = '';
+
+  // private _planType: string = '';
+
+  // @Input('planTypeAlias') set planType(value: string)
+  // {
+  //   this._planType = value.toUpperCase();
+  // }
+
+  // get planType(): string
+  // {
+  //   return this._planType;
+  // }
+
+  buttonClicked(valueEmitted: boolean)
   {
-    infos: 
-    {
-      tipo: 'Simples',
-      valor: 100,
-    }
-  };
+    console.log('Hiper OvO', valueEmitted);
+    console.log('planValue', this.planType);
+  }
 }

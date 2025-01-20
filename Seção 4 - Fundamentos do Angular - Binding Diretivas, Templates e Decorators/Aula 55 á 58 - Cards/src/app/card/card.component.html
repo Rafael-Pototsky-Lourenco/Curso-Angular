@@ -1,15 +1,15 @@
 <div class="card">
-     <div class="card__plan card__item">Plano <b>{{plano.infos?.tipo}}</b></div>
-     <div class="card__price card__item">R$ {{plano.infos?.valor}},00 / Mês</div>
-     <app-card-button-roxo></app-card-button-roxo>
+     <div class="card__plan card__item">Plano <b>{{ planType }}</b></div>
+     <div class="card__price card__item">R$ {{ planValue }},00 / Mês</div>
+     <app-card-button-roxo (buttonClick)="buttonClicked($event)" buttonDisabled></app-card-button-roxo>
      <app-card-button-cancel></app-card-button-cancel>
 
-     <mat-slider min="1" max="5" step="0.5">
+     <!-- <mat-slider min="1" max="5" step="0.5">
           <input matSliderThumb value="1.5">
      </mat-slider>
 
      <div class="global">GLOBAL</div>
      <div class="emulated">EMULATED</div>
 
-     <div class="card-cancel-button">SHADOW DOM</div>
+     <div class="card-cancel-button">SHADOW DOM</div> -->
 </div>
