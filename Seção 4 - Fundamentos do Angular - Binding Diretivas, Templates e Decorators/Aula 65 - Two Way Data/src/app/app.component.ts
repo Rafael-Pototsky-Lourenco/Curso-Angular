@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'TWO_DATA';
+  name: string = 'Jojo';
+
+  handleInputChange(event: string)
+  {
+    this.name = event.toUpperCase();
+  }
 }
