@@ -1,5 +1,19 @@
 <div class="list">
-  <app-person></app-person>
+  <app-person *ngFor="
+    let person of listPessoas;
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isOdd = odd;"
+    [personName]="person.name"
+    [personAge]="person.age"
+    [personIndex]="i"
+    [isFirst]="isFirst"
+    [isLast]="isLast"
+    [isOdd]="isOdd"
+    [isSelected]="personSelectedIndex === i"
+    (personSelected)="selectPerson($event)"
+  ></app-person>
   <!-- <div class="item item--highlighted">
     <p class="item__name">Fulano da Silva</p>
     <p class="item__age">34 anos</p>
