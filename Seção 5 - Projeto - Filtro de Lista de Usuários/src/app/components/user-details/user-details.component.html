@@ -5,31 +5,31 @@
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Nome: </b></span><span>Jorge Benjor</span>
+               <span class="mat-title-large"><b>Nome: </b></span><span>{{ user.nome }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Email: </b></span><span>jorjorARROBAjojomail.com</span>
+               <span class="mat-title-large"><b>Email: </b></span><span>{{ user.email }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Telefone: </b></span><span>1140028922</span>
+               <span class="mat-title-large"><b>Telefone: </b></span><span>{{ user.telefone }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Endereço: </b></span><span>Avenida Brasil, Oi oi ioi io (x2)</span>
+               <span class="mat-title-large"><b>Endereço: </b></span><span>{{ user.endereco?.rua }}, {{ user.endereco?.numero }}, {{ user.endereco?.cidade }} - {{ user.endereco?.estado }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Status: </b></span><span>Bloqueado</span>
+               <span class="mat-title-large"><b>Status: </b></span><span>{{ user.ativo }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Função: </b></span><span>Meu p na sua m</span>
+               <span class="mat-title-large"><b>Função: </b></span><span>{{ user.funcao }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Data de Cadastro: </b></span><span>01/01/1001</span>
+               <span class="mat-title-large"><b>Data de Cadastro: </b></span><span>{{ user.dataCadastro }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
      </mat-list>
