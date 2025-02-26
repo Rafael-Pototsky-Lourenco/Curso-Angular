@@ -5,11 +5,11 @@
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Nome: </b></span><span>{{ user.nome }}</span>
+               <span class="mat-title-large"><b>Nome: </b></span><span>{{ user.nome | dashIfEmpty }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Email: </b></span><span>{{ user.email }}</span>
+               <span class="mat-title-large"><b>Email: </b></span><span>{{ user.email | dashIfEmpty }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
@@ -25,13 +25,13 @@
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
-               <span class="mat-title-large"><b>Função: </b></span><span>{{ user.funcao }}</span>
+               <span class="mat-title-large"><b>Função: </b></span><span>{{ user.funcao | dashIfEmpty }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
           <mat-list-item>
                <!--Quando você coloca o ":" depois de um pipe, você está passando mais de um parâmetro para o pipe, aqui embaixo por exemplo,
                está sendo passado a data e o formato de dia / mês / ano, caso fosse passar mais um parâmetro era só colocar ":" novamente.-->
-               <span class="mat-title-large"><b>Data de Cadastro: </b></span><span>{{ user.dataCadastro | date:'dd/MM/yyyy' }}</span>
+               <span class="mat-title-large"><b>Data de Cadastro: </b></span><span>{{ user.dataCadastro | date:'dd/MM/yyyy' | dashIfEmpty }}</span>
           </mat-list-item>
           <mat-divider></mat-divider>
      </mat-list>
