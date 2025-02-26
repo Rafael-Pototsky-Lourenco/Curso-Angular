@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser } from './interfaces/user.interface';
 import { UsersList } from './data/users-list';
+import { IUser } from './interfaces/user/user.interface';
 
 @Component({
   selector: 'app-root',
