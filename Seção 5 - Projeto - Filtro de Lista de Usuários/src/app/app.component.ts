@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersList } from './data/users-list';
 import { IUser } from './interfaces/user/user.interface';
 import { IFilterOptions } from './interfaces/filter-options.interface';
+import { filterUsersList } from './utils/filter-users-list';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,15 @@ import { IFilterOptions } from './interfaces/filter-options.interface';
 })
 export class AppComponent implements OnInit {
   usersList: IUser[] = [];
+  usersListFiltered: IUser[] = [];
   userSelected: IUser = {} as IUser;
   showUserDetails: boolean = false;
 
   ngOnInit() {
     setTimeout(() => {
       this.usersList = UsersList;
-    }, 3000);
+      this.usersListFiltered = this.usersList;
+    }, 1000);
   }
 
   onUserSelected(user: IUser)
@@ -27,6 +30,6 @@ export class AppComponent implements OnInit {
 
   onFilter(filterOptions: IFilterOptions)
   {
-    console.log(filterOptions);
+    this.usersListFiltered = filterUsersList(filterOptions, this.usersList);
   }
 }
