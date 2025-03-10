@@ -19,4 +19,14 @@ Meu input: <input type="text" #meuInput>
 Meu input: <input type="text" #meuInput>-->
 
 <!-- Aula 102 -->
-<button #meuButton *ngFor="let btn of buttonsList">{{ btn }}</button>
+<button
+#meuButton
+class="btn-{{ i }}"
+*ngFor="let btn of buttonsList; let i = index"
+(click)="changeColor($event)"> {{ btn }} </button>
+
+<button (click)="resetButtons()">Bites da Dusto</button>
+
+<button (click)="first()">Shigechi</button>
+
+<button (click)="remove()">Kira Queen</button>
