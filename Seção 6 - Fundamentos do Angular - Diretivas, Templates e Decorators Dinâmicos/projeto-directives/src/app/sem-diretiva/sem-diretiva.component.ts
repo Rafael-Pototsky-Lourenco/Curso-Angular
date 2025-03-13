@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './sem-diretiva.component.scss'
 })
 export class SemDiretivaComponent {
+  // Meu Exemplo
   changeBackground(event: Event)
   {
     const target = event.target as HTMLElement;
@@ -18,5 +19,18 @@ export class SemDiretivaComponent {
     const target = event.target as HTMLElement;
 
     target.style.backgroundColor = '';
+  }
+
+  // Exemplo Prof
+  addBgColor: boolean = false;
+
+  onMouseOver()
+  {
+    this.addBgColor = true;
+  }
+
+  onMouseOut()
+  {
+    this.addBgColor = false;
   }
 }

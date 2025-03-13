@@ -1,3 +1,25 @@
+<!-- Meu exemplo -->
 <p
 (mouseover)="changeBackground($event)"
 (mouseout)="returnBackground($event)">Parágrafo sem Diretiva</p>
+
+<!-- Exemplo do Prof -->
+<p
+     [ngStyle]="{
+          'background-color': addBgColor ? 'orange' : 'transparent',
+     }"
+     (mouseover)="onMouseOver()"
+     (mouseout)="onMouseOut()"
+>Parágrafo sem Diretiva</p>
+
+<!-- Comp X -->
+<!-- <app-sem-diretiva [innerText]="'Texto do comp X'" [addBgColor]="'green'" [fontSize]="'16px'"></app-sem-diretiva> -->
+
+<!-- Comp Y -->
+<!-- <app-sem-diretiva [innerText]="'Texto do comp Y'" [addBgColor]="'blue'" [fontSize]="'14px'"></app-sem-diretiva> -->
+
+<!-- Comp X -->
+<p appHighLight>Sou um parágrafo com Diretiva X</p>
+
+<!-- Comp Y -->
+<p appHighLight>Sou um parágrafo com Diretiva Y</p>
