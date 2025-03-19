@@ -31,4 +31,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.divEl.nativeElement.textContent = 'EU SOU UMA DIO!';
     this.divEl.nativeElement.classList.add('minha-classe');
   }
+
+  createElement() {
+    const novaDiv = document.createElement('div');
+
+    novaDiv.textContent = 'sou uma nova DIO!';
+  }
 }
