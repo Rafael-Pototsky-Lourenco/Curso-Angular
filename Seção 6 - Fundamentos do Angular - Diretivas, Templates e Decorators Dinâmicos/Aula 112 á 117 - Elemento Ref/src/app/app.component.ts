@@ -5,7 +5,10 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit, AfterViewInit {
+
+export class AppComponent {
+  /* Aula 113:
+  export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
 
   constructor(private readonly _elRef: ElementRef) { }
@@ -35,6 +38,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   createElement() {
     const novaDiv = document.createElement('div');
 
-    novaDiv.textContent = 'sou uma nova DIO!';
-  }
+    novaDiv.textContent = 'você achou que era uma div, mas era eu, DIO!';
+    novaDiv.classList.add('bg-red');
+
+    this._elRef.nativeElement.appendChild(novaDiv);
+  }*/
 }
