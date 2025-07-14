@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, input, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-xss',
@@ -7,8 +7,8 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
 })
 export class XssComponent {
   constructor(
-    private _elRef: ElementRef,
-    private _renderer2: Renderer2
+    private readonly _elRef: ElementRef,
+    private readonly _renderer2: Renderer2
   ) { }
 
   createElement(inputText: string)
@@ -18,5 +18,23 @@ export class XssComponent {
     divEl.innerHTML = inputText;
 
     this._elRef.nativeElement.appendChild(divEl);
+  }
+
+  createElementCorrect(inputText: string)
+  {
+    const divEl = this._renderer2.createElement('div');
+
+    const text = this._renderer2.createText(inputText);
+
+    this._renderer2.appendChild(divEl, text);
+    this._renderer2.setStyle(divEl, 'color', 'white');
+    this._renderer2.addClass(divEl, 'bg-red');
+
+    this._renderer2.appendChild(this._elRef.nativeElement, divEl);
+
+    const novaDiv = document.createElement('div');
+    novaDiv.textContent = 'Sou a nova DIO';
+    this._renderer2.addClass(novaDiv, 'bg-blue');
+    this._renderer2.appendChild(this._elRef.nativeElement, novaDiv);
   }
 }
