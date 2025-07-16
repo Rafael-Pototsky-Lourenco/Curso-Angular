@@ -1,3 +1,47 @@
 .balance-card {
-   
+   width: 500px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 0 10px;
+
+   .header-balance-card {
+      background-color: orange;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+
+      .balance-title {
+         display: flex;
+         width: 74%;
+      }
+
+      .money-title {
+         display: flex;
+         justify-content: end;
+         width: 75px;
+      }
+
+      img {
+         width: 30px;
+         margin-right: 10px;
+      }
+   }
+
+   .content-balance-card {
+      padding: 20px;
+      font-size: 16px;
+      width: 500px;
+
+      .total-balance {
+         margin: 25px 0;
+      }
+
+      p {
+         margin: 10px 0;
+         display: flex;
+         justify-content: space-between;
+      }
+   }
 }

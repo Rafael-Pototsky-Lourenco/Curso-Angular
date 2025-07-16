@@ -1,3 +1,33 @@
 .client-infos-card {
-   
+   width: 500px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 0 10px;
+
+   .header-info-card {
+      background-color: cyan;
+      width: 500px;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+
+      img {
+         width: 30px;
+         margin-right: 10px;
+      }
+   }
+
+   .content-info-card {
+      padding: 20px;
+      font-size: 16px;
+      width: 500px;
+
+      p {
+         margin: 15px 0;
+         display: flex;
+         justify-content: space-between;
+      }
+   }
 }
