@@ -1,0 +1,48 @@
+.balance-card, .credit-card, .debit-card, .client-infos-card {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+
+  .header-balance-card, .header-credit-card, .header-debit-card, .header-info-card {
+    background-color: rgb(233, 129, 50);
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+
+    .balance-title {
+      display: flex;
+      margin-right: auto;
+      align-items: center;
+    }
+
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  .header-info-card {
+    background-color: cyan;
+  }
+
+  .content-balance-card, .content-credit-card, .content-debit-card, .content-info-card {
+    padding: 20px;
+    font-size: 16px;
+    width: 500px;
+
+    .total-balance {
+      margin: 20px 0;
+      background-color: lightgray;
+      padding: 5px;
+    }
+
+    p {
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
