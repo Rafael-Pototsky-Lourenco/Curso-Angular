@@ -29,6 +29,24 @@
     font-size: 16px;
     width: 500px;
 
+    .content-card {
+      padding: 5px 25px 0 10px;
+      font-size: 16px;
+      width: 500px;
+
+      p {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .master-card {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+
     .total-balance {
       margin: 20px 0;
       background-color: rgba(0, 0, 0, 0.1);
