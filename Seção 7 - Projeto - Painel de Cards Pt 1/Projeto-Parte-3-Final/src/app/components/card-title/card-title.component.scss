@@ -1,0 +1,16 @@
+.header-card {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+
+  .title-card {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  img {
+    width: 40px;
+    margin-right: 10px;
+  }
+}
