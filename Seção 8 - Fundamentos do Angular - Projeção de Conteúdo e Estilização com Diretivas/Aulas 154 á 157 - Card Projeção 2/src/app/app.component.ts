@@ -5,8 +5,8 @@ import { CardContentDirective } from "./card/directives/base/card-content.direct
 import { CardMainTextDirective } from "./card/directives/texts/card-main-text.directive";
 import { CardSubTextDirective } from "./card/directives/texts/card-sub-text.directive";
 import { CardDescriptionTextDirective } from "./card/directives/texts/card-description-text.directive";
-import { CardSmolDirective } from "./card/directives/texts/card-smol.directive";
-import { CardBigDirective } from "./card/directives/texts/card-big.directive";
+import { CardSmolDirective } from "./card/directives/images/card-smol.directive";
+import { CardBigDirective } from "./card/directives/images/card-big.directive";
 
 @Component({
   selector: 'app-root',
