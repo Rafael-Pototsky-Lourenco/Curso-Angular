@@ -1,0 +1,31 @@
+.balance-card {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+
+  .header-balance-card {
+    background-color: rgb(233, 129, 50);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: auto;
+      padding-right: 20px;
+    }
+  }
+
+  .content-balance-card {
+    padding: 8px;
+    font-size: 16px;
+    width: 500px;
+
+    .total-balance {
+      margin: 20px 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 5px;
+    }
+  }
+}
