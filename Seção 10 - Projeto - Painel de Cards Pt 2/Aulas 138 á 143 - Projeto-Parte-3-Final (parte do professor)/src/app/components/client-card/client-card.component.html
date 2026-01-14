@@ -1,7 +1,15 @@
 <app-card>
-  <app-card-header color="ca-c-card__header--bg-blue">
+  <app-card-header [attr.color]="headerColor">
     <app-card-title title="Informações do Cliente" icon="icon-client.png"></app-card-title>
   </app-card-header>
+  <!-- Opção com SCSS usando atributo "color"
+  <app-card-header color="cyan">
+    <app-card-title title="Informações do Cliente" icon="icon-client.png"></app-card-title>
+  </app-card-header> -->
+  <!-- Opção com directive usando o atributo "color" como 'classe'
+  <app-card-header color="ca-c-card__header--bg-blue">
+    <app-card-title title="Informações do Cliente" icon="icon-client.png"></app-card-title>
+  </app-card-header> -->
   <app-card-content>
     <app-card-item text="Nome" value="Felipe da Silva Freitas"></app-card-item>
 

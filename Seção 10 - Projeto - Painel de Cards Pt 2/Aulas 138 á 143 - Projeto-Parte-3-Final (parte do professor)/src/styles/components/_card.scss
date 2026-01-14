@@ -9,6 +9,14 @@
     background-color: rgb(233, 129, 50);
     display: block;
 
+    &[color="cyan"] {
+      background-color: #32e9da;
+    }
+
+    &[color="wine"] {
+      background-color: darkred;
+    }
+
     &--bg-blue {
       background-color: #32e9da;
     }
