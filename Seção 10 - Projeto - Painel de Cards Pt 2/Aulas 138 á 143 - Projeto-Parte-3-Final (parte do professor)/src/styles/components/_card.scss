@@ -17,7 +17,7 @@
       background-color: darkred;
     }
 
-    &--bg-blue {
+    &--bg-cyan {
       background-color: #32e9da;
     }
   }
@@ -29,5 +29,15 @@
     border-bottom-right-radius: 5px;
     background-color: white;
     display: block;
+  }
+
+  &__title-text {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  &__description-text {
+    font-size: 17px;
+    font-weight: 500;
   }
 }
